@@ -1,0 +1,7 @@
+runtime: nodejs18
+
+instance_class: F2
+
+env_variables:
+  NODE_ENV: production
+  TBOT_TOKEN: '5924752974:AAGEM6-fehG0I5KWmcz_noW0tANR1szabUI'
