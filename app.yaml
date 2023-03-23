@@ -1,7 +1,8 @@
 runtime: nodejs18
 
-instance_class: F2
+instance_class: F1
 
 env_variables:
   NODE_ENV: production
-  TBOT_TOKEN: '5924752974:AAGEM6-fehG0I5KWmcz_noW0tANR1szabUI'
+  TELEGRAM_BOT_TOKEN: '6282164100:AAGiW-u88ZkIyOUHePs4z-R_t80qvUMfRWo'
+  GC_BUCKET_PUBLIC: 'https://storage.googleapis.com/tbot_storage'
