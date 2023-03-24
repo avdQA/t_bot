@@ -6,6 +6,8 @@ import { Telegraf } from 'telegraf';
 import { getMainMenu, yesNoKeyboard } from './keyboards.js';
 
 const app = express();
+app.set('trust proxy', true);
+
 const bot = new Telegraf(botConfig.TELEGRAM_BOT_TOKEN);
 
 function botStart(ctx) {
@@ -173,4 +175,19 @@ bot.launch();
 app.listen(botConfig.PORT, function (err) {
   if (err) console.log(err);
   console.log('Server listening on PORT ', botConfig.PORT);
+});
+
+// With middleware
+app.use('/', function (req, res, next) {
+  res.send({
+    title:
+      'Hi there, "♠ ♥ ♦ ♣ Та самая игра в мемы" is sucssesfuly running ...',
+  });
+  next();
+});
+
+app.get('/', function (req, res) {
+  console.log(
+    'Hi there, "♠ ♥ ♦ ♣ Та самая игра в мемы" is sucssesfuly running ...'
+  );
 });
