@@ -90,12 +90,6 @@ function getCategory(ctx) {
             callback_data: 'checkAdult',
           },
         ],
-        [
-          {
-            text: '📝 Правила игри',
-            callback_data: 'mainRule',
-          },
-        ],
       ],
     },
   });
@@ -166,6 +160,14 @@ bot.command('time', (ctx) => {
   ctx.reply(String(new Date()));
 });
 
+bot.command('categories', (ctx) => {
+  getCategory(ctx);
+});
+
+bot.command('rule', (ctx) => {
+  getMainRule(ctx);
+});
+
 bot.on('sticker', (ctx) => {
   ctx.reply('Прикольный стикер');
 });
@@ -187,6 +189,12 @@ app.use('/', function (req, res, next) {
 });
 
 app.get('/', function (req, res) {
+  console.log(
+    'Hi there, "♠ ♥ ♦ ♣ Та самая игра в мемы" is sucssesfuly running ...'
+  );
+});
+
+app.get('/game-hook', function (req, res) {
   console.log(
     'Hi there, "♠ ♥ ♦ ♣ Та самая игра в мемы" is sucssesfuly running ...'
   );

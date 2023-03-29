@@ -4,5 +4,5 @@ instance_class: F1
 
 env_variables:
   NODE_ENV: production
-  TELEGRAM_BOT_TOKEN: '6282164100:AAGiW-u88ZkIyOUHePs4z-R_t80qvUMfRWo'
+  TELEGRAM_BOT_TOKEN: '6282164100:AAE_YsPyqrixJl1-7Ws492FtqbpH_k33lTI'
   GC_BUCKET_PUBLIC: 'https://storage.googleapis.com/tbot_storage'
